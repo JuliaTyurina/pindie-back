@@ -4,7 +4,7 @@ const allowedCors = [
     'https://students-projects.ru',
     'http://localhost:3000',
     'http://localhost:3001',
-    'pindie-frontend-jt.nomoredomainswork.ru'
+    'https://pindie-frontend-jt.nomoredomainswork.ru'
 ];
 
 // Функция, которая принимает объекты req (информация о запросе),
