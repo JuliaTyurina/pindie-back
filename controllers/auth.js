@@ -8,7 +8,7 @@ const login = (req, res) => {
 
     users.findUserByCredentials(email, password)
         .then((user) => {
-            const token = jwt.sign({ _id: user._id }, "some-secret-key", {
+            const token = jwt.sign({ _id: user._id, username: user.username, email: user.email}, "some-secret-key", {
                 expiresIn: 3600
             })
             return { user, token };
@@ -35,7 +35,7 @@ const sendIndex = (req, res) => {
         jwt.verify(req.cookies.jwt, "some-secret-key");
         return res.redirect("/admin/dashboard");
       } catch (err) {
-        console.err("Ошибка верификации JWT:", err);
+        console.error("Ошибка верификации JWT:", err);
         res.sendFile(path.join(__dirname, "../public/index.html"));
       }
     }
