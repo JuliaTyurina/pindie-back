@@ -4,7 +4,6 @@ const allowedCors = [
     'https://students-projects.ru',
     'http://localhost:3000',
     'http://localhost:3001',
-    'http://pindie-frontend-jt.nomoredomainswork.ru',
     'https://pindie-frontend-jt.nomoredomainswork.ru'
 ];
 
